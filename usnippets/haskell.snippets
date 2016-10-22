@@ -54,3 +54,20 @@ let ${1:x} = ${2:y}
  in ${VISUAL}$0
 endsnippet
 
+global !p
+def create_hsdata_placeholders(snip):
+		placeholders_count = int(snip.buffer[snip.line].strip())
+		snip.buffer[snip.line] = ''
+		body = "data $1"
+		if placeholders_count > 0:
+				body += "\n  = $2"
+		body += ''.join('\n  | $' + str(i+3) for i in range(placeholders_count-1))
+		body += '$0\n  deriving ($' + str(placeholders_count+2) + ')'
+
+		snip.expand_anon(body)
+endglobal
+
+post_jump "create_hsdata_placeholders(snip)"
+snippet "dat(\d+)" "" r
+`!p snip.rv = match.group(1)`
+endsnippet
