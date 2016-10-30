@@ -1,57 +1,112 @@
-snippet pragma "" b
-{-# ${1:LANGUAGE} $2 #-}
+snippet pragma "Pragma" b
+{-# ${1:LANGUAGE} ${0:FlexibleContexts} #-}
 endsnippet
 
-snippet imp "" b
+snippet lang "Language pragma" b
+{-# LANGUAGE ${0:FlexibleContexts} #-}
+endsnippet
+
+
+snippet imp "Import" b
 import           ${1:Module}
 endsnippet
 
-snippet imps "" b
-import           ${1:Module} ($2)
+snippet imps "Import selected" b
+import           ${1:Module} (${2:Foo(foo), bar})
 endsnippet
 
-snippet impq "" b
-import qualified ${1:Module}
+snippet impq "Import qualified" b
+import qualified ${1:The.Module} as ${2:TM}
 endsnippet
 
-snippet impqs "" b
-import qualified ${1:Module} ($2)
+snippet impqs "Import qualified, selected" b
+import qualified ${1:The.Module} as ${2:TM} (${3:Foo(foo), bar})
 endsnippet
 
-snippet newt "" b
-newtype ${1:Wrapper}${0: a}
-  = ${2:$1} ${3:Type}
-  deriving (${4:Show})
+snippet newt "Newtype" b
+newtype ${1:Wrapper}${2: Int}
+  = $1 $2
+  deriving (${3:Show})
 endsnippet
 
-snippet newtr "" b
-newtype ${1:Wrapper}${0: a}
-  = ${2:$1} { un$1 :: ${3:Type} }
-  deriving (${4:Show})
+snippet newtr "Newtype w/ unwrapper" b
+newtype ${1:Wrapper}${2: Int}
+  = $1 { un$1 :: $2 }
+  deriving (${3:Show})
 endsnippet
 
-snippet dat "" b
+snippet data "ADT (simple)" b
 data $1
-  = $0
-	deriving ($2)
+  = $2$0
+	deriving ($3)
 endsnippet
 
-snippet cls "" b
-class $1 where
-  $0
+snippet gadt "GADT declaration" b
+data ${1:Maybe} :: ${2:* -> *} where
+    ${0:Nothing} :: $1 a
 endsnippet
 
-snippet \ ""
+snippet class "Class" b
+class ${1:Show} ${2:a} where
+    ${0:show :: $2 -> String}
+endsnippet
+
+snippet inst "Instance block" b
+instance ${1:Show Type} where
+    ${0:show x = "?"}
+endsnippet
+
+snippet instder "Instance deriving" b
+deriving instance ($1 ${0:a}) => ${1:Show} (${2:Type})
+endsnippet
+
+snippet \ "Lambda"
 \\${1:x} -> ${0:expr}
 endsnippet
 
-snippet (\ ""
-(\\${1:x} -> ${0:expr})
+snippet (\ "Lambda in parens"
+(\\${1:x} -> ${2:expr})$0
 endsnippet
 
-snippet let ""
-let ${1:x} = ${2:y}
- in ${VISUAL}$0
+snippet let "pure let"
+let ${1:x} = ${2:${VISUAL:v}}
+ in $0
+endsnippet
+
+snippet typefo "Open type family" b
+type family ${1:G a}
+${0:G Int = Bool}
+endsnippet
+
+snippet typefc "Closed type family" b
+type family ${1:G a} where
+    ${0:G Int = Bool}
+endsnippet
+
+snippet pred "Predicate"
+(${0:Show a}) => ${VISUAL}
+endsnippet
+
+snippet funp "One-line function w/ pred" b
+${1:myFun} :: (${3:Show a}) => ${2:a -> IO Missles}
+$1 ${4:x} = ${0:body}
+endsnippet
+
+snippet fun "One-line function" b
+${1:myFun} :: ${2:Int -> IO Missles}
+$1 ${3:x} = ${0:body}
+endsnippet
+
+snippet funw "Function with 'where' clause" b
+${1:myFun} :: ${2:Int -> IO Missles}
+$1 ${3:x} = ${0:body}
+    ${0:body}
+	where
+endsnippet
+
+snippet case "Case clause"
+case ${1:x} of
+  ${2:_} -> ${0:Nothing}
 endsnippet
 
 global !p
@@ -71,3 +126,4 @@ post_jump "create_hsdata_placeholders(snip)"
 snippet "dat(\d+)" "" r
 `!p snip.rv = match.group(1)`
 endsnippet
+
