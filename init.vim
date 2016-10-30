@@ -43,6 +43,7 @@ Plug 'SirVer/ultisnips'
 Plug 'scrooloose/nerdcommenter'
 Plug 'majutsushi/tagbar'
 Plug 'sjl/badwolf/'
+Plug 'rizzatti/dash.vim'
 
 " Haskell
 Plug 'Shougo/vimproc.vim', { 'do': 'make' } | Plug 'eagletmt/ghcmod-vim', { 'for': 'haskell' }
