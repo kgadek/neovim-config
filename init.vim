@@ -26,6 +26,13 @@ let mapleader = ","
 map <leader>yy "*y
 map <leader>yp "*p
 
+" Tabs
+"nnoremap <C-Left> :tabprevious<CR>
+"nnoremap <C-Right> :tabnext<CR>
+"nnoremap <silent> <A-Left> :execute 'silent! tabmove ' . (tabpagenr()-2)<CR>
+"nnoremap <silent> <A-Right> :execute 'silent! tabmove ' . (tabpagenr()+1)<CR>
+"cabbrev tabv tab sview +setlocal\ nomodifiable
+
 "===============================================================================
 " Plugins
 "===============================================================================
