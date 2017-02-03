@@ -188,3 +188,8 @@ let g:tagbar_type_haskell = {
         \ 'type'   : 't'
     \ }
 \ }
+
+
+" Shell
+"===============================================================================
+autocmd FileType sh setlocal shiftwidth=4 tabstop=4
