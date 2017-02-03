@@ -139,6 +139,7 @@ function! SetHaskellFilesOptions()
   vmap <leader>a= :Tabularize /=
   vmap <leader>a; :Tabularize /::
   vmap <leader>a- :Tabularize /->
+  vmap <leader>aa :Tabularize /\<as\>
   " GHC-Mod
   map <silent> <leader>mi :GhcModTypeInsert<CR>
   map <silent> <leader>ms :GhcModSplitFunCase<CR>
