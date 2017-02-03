@@ -1,3 +1,18 @@
+snippet mod "Module export-all" b
+module $1 where
+
+$0
+endsnippet
+
+snippet mods "Module export-all" b
+module $1 (
+		${2:Foo
+	, Bar}
+	) where
+
+$0
+endsnippet
+
 snippet pragma "Pragma" b
 {-# ${1:LANGUAGE} ${0:FlexibleContexts} #-}
 endsnippet
