@@ -101,7 +101,7 @@ nmap <leader>t :TagbarToggle
 " Haskell
 "===============================================================================
 " First, install tools:
-"   stack install hlint ghc-mod hdevtools pointfree fast-tags
+"   stack install hlint ghc-mod hdevtools pointfree fast-tags hpack
 "   syspip3 install --user --upgrade neovim
 " Second, prepare the wrapper script called pointfreexargs:
 "   #!/bin/bash
