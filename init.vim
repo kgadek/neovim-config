@@ -98,6 +98,11 @@ let g:UltiSnipsSnippetDirectories=["usnippets"]
 " tagbar
 nmap <leader>t :TagbarToggle
 
+" dash
+let g:dash_map = { 'haskell': 'ha' }
+nmap <silent> <leader>d <Plug>DashSearch
+
+
 " Haskell
 "===============================================================================
 " First, install tools:
