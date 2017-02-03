@@ -61,6 +61,9 @@ Plug 'Shougo/vimproc.vim', { 'do': 'make' } | Plug 'eagletmt/ghcmod-vim', { 'for
 Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
 Plug 'eagletmt/neco-ghc', { 'for': 'haskell' }
 
+" Scala
+Plug 'derekwyatt/vim-scala'
+
 call plug#end()
 
 " Customization
