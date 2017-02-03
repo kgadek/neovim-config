@@ -9,6 +9,7 @@ set incsearch
 set backspace=2 " backspace: work for auto-indentations
 set breakindent " preserve indentation on breaking
 set nohls
+set cc=100
 
 " Include custom syntax highlighing rules (add early to override default ones)
 "-------------------------------------------------------------------------------
