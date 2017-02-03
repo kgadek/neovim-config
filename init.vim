@@ -53,6 +53,9 @@ Plug 'sjl/badwolf/'
 Plug 'rizzatti/dash.vim'
 Plug 'tpope/vim-fugitive', { 'do': ':helptags ~/.nvim/vim-plug/vim-fugitive/doc' }
 
+" Ansible
+Plug 'pearofducks/ansible-vim'
+
 " Haskell
 Plug 'Shougo/vimproc.vim', { 'do': 'make' } | Plug 'eagletmt/ghcmod-vim', { 'for': 'haskell' }
 Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
