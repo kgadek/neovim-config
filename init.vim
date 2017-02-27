@@ -71,6 +71,7 @@ call plug#end()
 
 " badwolf
 colorscheme badwolf
+set background=dark
 
 " haya14busa/incsearch.vim
 map / <Plug>(incsearch-forward)
