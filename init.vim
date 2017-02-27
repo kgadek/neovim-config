@@ -69,6 +69,9 @@ call plug#end()
 " Customization
 "-------------------------------------------------------------------------------
 
+set cursorline
+set cursorcolumn
+
 " badwolf
 colorscheme badwolf
 set background=dark
