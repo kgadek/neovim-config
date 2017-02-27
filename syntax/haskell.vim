@@ -355,3 +355,7 @@ let b:current_syntax = "haskell"
 
 "let g:haskellmode_completion_ghc = 0
 "autocmd FileType haskell setlocal omnifunc=necoghc#omnifunc
+
+
+" As suggested here: https://www.reddit.com/r/haskell/comments/4k8iy5/til_when_using_vim_to_edit_haskell_setlocal/
+setlocal cpoptions+=M
