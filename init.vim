@@ -52,6 +52,7 @@ Plug 'majutsushi/tagbar'
 Plug 'sjl/badwolf/'
 Plug 'rizzatti/dash.vim'
 Plug 'tpope/vim-fugitive', { 'do': ':helptags ~/.nvim/vim-plug/vim-fugitive/doc' }
+Plug 'bitc/lushtags', { 'do': 'stack install' }
 
 " Ansible
 Plug 'pearofducks/ansible-vim'
