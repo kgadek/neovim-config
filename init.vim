@@ -55,6 +55,8 @@ Plug 'tpope/vim-fugitive', { 'do': ':helptags ~/.nvim/vim-plug/vim-fugitive/doc'
 Plug 'bitc/lushtags', { 'do': 'stack install' }
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
+Plug 'airblade/vim-gitgutter'
+Plug 'jreybert/vimagit'
 
 " Ansible
 Plug 'pearofducks/ansible-vim'
