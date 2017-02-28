@@ -92,6 +92,7 @@ let g:deoplete#enable_at_startup = 1
 
 " NERDTree
 map <leader>n :NERDTreeToggle
+let g:NERDTreeMouseMode=2  " toggle dirs with single click
 
 " ultisnips
 let g:UltiSnipsExpandTrigger="<tab>"
