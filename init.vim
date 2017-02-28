@@ -53,6 +53,8 @@ Plug 'sjl/badwolf/'
 Plug 'rizzatti/dash.vim'
 Plug 'tpope/vim-fugitive', { 'do': ':helptags ~/.nvim/vim-plug/vim-fugitive/doc' }
 Plug 'bitc/lushtags', { 'do': 'stack install' }
+Plug 'vim-airline/vim-airline'
+Plug 'vim-airline/vim-airline-themes'
 
 " Ansible
 Plug 'pearofducks/ansible-vim'
@@ -76,6 +78,10 @@ set cursorcolumn
 " badwolf
 colorscheme badwolf
 set background=dark
+
+" vim-airline
+let g:airline_theme='badwolf'
+let g:airline#extensions#tabline#enabled = 1
 
 " haya14busa/incsearch.vim
 map / <Plug>(incsearch-forward)
