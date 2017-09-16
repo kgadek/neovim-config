@@ -77,6 +77,9 @@ call plug#end()
 set cursorline
 set cursorcolumn
 
+" vim-fugitive
+set diffopt+=vertical
+
 " badwolf
 colorscheme badwolf
 set background=dark
