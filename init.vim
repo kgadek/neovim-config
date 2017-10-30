@@ -131,32 +131,32 @@ nmap <silent> <leader>d <Plug>DashSearch
 "   myvar=`cat`
 "   pointfree "$myvar"
 
-augroup AugHaskell
-  autocmd!
-  autocmd FileType haskell call SetHaskellFilesOptions()
-augroup END
-
-function! SetHaskellFilesOptions()
-  autocmd BufEnter set formatprg=pointfreexargs
-
-  " Neomake
-  autocmd BufWritePost <buffer> Neomake
-  " neco-ghc
-  setlocal omnifunc=necoghc#omnifunc
-  " tabular
-  vmap <leader>a= :Tabularize /=
-  vmap <leader>a; :Tabularize /::
-  vmap <leader>a- :Tabularize /->
-  vmap <leader>aa :Tabularize /\<as\>
-  " GHC-Mod
-  map <silent> <leader>mi :GhcModTypeInsert<CR>
-  map <silent> <leader>ms :GhcModSplitFunCase<CR>
-  map <silent> <leader>mt :GhcModType<CR>
-  map <silent> <leader>mx :GhcModTypeClear<CR>
-endfunction
-
-let g:deoplete#omni#functions = {}
-let g:deoplete#omni#functions.haskell = 'necoghc#omnifunc'
+" augroup AugHaskell
+"   autocmd!
+"   autocmd FileType haskell call SetHaskellFilesOptions()
+" augroup END
+" 
+" function! SetHaskellFilesOptions()
+"   autocmd BufEnter set formatprg=pointfreexargs
+" 
+"   " Neomake
+"   autocmd BufWritePost <buffer> Neomake
+"   " neco-ghc
+"   setlocal omnifunc=necoghc#omnifunc
+"   " tabular
+"   vmap <leader>a= :Tabularize /=
+"   vmap <leader>a; :Tabularize /::
+"   vmap <leader>a- :Tabularize /->
+"   vmap <leader>aa :Tabularize /\<as\>
+"   " GHC-Mod
+"   map <silent> <leader>mi :GhcModTypeInsert<CR>
+"   map <silent> <leader>ms :GhcModSplitFunCase<CR>
+"   map <silent> <leader>mt :GhcModType<CR>
+"   map <silent> <leader>mx :GhcModTypeClear<CR>
+" endfunction
+" 
+" let g:deoplete#omni#functions = {}
+" let g:deoplete#omni#functions.haskell = 'necoghc#omnifunc'
 
 
 " Shell
