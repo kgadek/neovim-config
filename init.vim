@@ -10,6 +10,7 @@ set backspace=2 " backspace: work for auto-indentations
 set breakindent " preserve indentation on breaking
 set nohls
 set cc=100
+set mouse=a
 
 " Include custom syntax highlighing rules (add early to override default ones)
 "-------------------------------------------------------------------------------
