@@ -11,6 +11,10 @@ set breakindent " preserve indentation on breaking
 set nohls
 set cc=100
 set mouse=a
+set iskeyword+=-
+
+set listchars=eol:$,tab:>-,trail:~,extends:>,precedes:<
+set list
 
 " Include custom syntax highlighing rules (add early to override default ones)
 "-------------------------------------------------------------------------------
@@ -53,11 +57,12 @@ Plug 'majutsushi/tagbar'
 Plug 'sjl/badwolf/'
 Plug 'rizzatti/dash.vim'
 Plug 'tpope/vim-fugitive', { 'do': ':helptags ~/.nvim/vim-plug/vim-fugitive/doc' }
-Plug 'bitc/lushtags', { 'do': 'stack install' }
+Plug 'bitc/lushtags', { 'do': 'stack install --install-ghc' }
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
 Plug 'airblade/vim-gitgutter'
 Plug 'jreybert/vimagit'
+Plug 'sheerun/vim-polyglot'
 
 " Ansible
 Plug 'pearofducks/ansible-vim'
@@ -74,6 +79,9 @@ call plug#end()
 
 " Customization
 "-------------------------------------------------------------------------------
+
+" Enable fzf
+set rtp+=/usr/local/opt/fzf
 
 set cursorline
 set cursorcolumn
