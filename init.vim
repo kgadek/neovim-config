@@ -106,6 +106,7 @@ map g/ <Plug>(incsearch-stay)
 map <silent> <leader>p :CtrlP()
 noremap <leader>bp :CtrlPBuffer<cr>
 let g:ctrlp_custom_ignore = '\v[\/]dist$'
+let g:ctrlp_user_command = ['.git', 'cd %s; and git ls-files -co --exclude-standard']
 
 " deoplete
 let g:deoplete#enable_at_startup = 1
