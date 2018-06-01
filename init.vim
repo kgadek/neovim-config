@@ -45,19 +45,20 @@ map <leader>yp "*p
 "-------------------------------------------------------------------------------
 call plug#begin('~/.nvim/vim-plug')
 
+Plug 'vim-syntastic/syntastic'
 Plug 'neomake/neomake'
 Plug 'tpope/vim-surround'
 Plug 'haya14busa/incsearch.vim'
 Plug 'godlygeek/tabular'
 Plug 'ctrlpvim/ctrlp.vim'
 Plug 'scrooloose/nerdtree'
-Plug 'SirVer/ultisnips'
+Plug 'SirVer/ultisnips', { 'do': 'env PIP_REQUIRE_VIRTUALENV= pip3 install neovim' }
 Plug 'scrooloose/nerdcommenter'
 Plug 'majutsushi/tagbar'
 Plug 'sjl/badwolf/'
 Plug 'rizzatti/dash.vim'
 Plug 'tpope/vim-fugitive', { 'do': ':helptags ~/.nvim/vim-plug/vim-fugitive/doc' }
-Plug 'bitc/lushtags', { 'do': 'stack install --install-ghc' }
+"Plug 'bitc/lushtags', { 'do': 'stack install --install-ghc' }
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
 Plug 'airblade/vim-gitgutter'
@@ -68,12 +69,15 @@ Plug 'sheerun/vim-polyglot'
 Plug 'pearofducks/ansible-vim'
 
 " Haskell
-Plug 'Shougo/vimproc.vim', { 'do': 'make' } | Plug 'eagletmt/ghcmod-vim', { 'for': 'haskell' }
-Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
-Plug 'eagletmt/neco-ghc', { 'for': 'haskell' }
+"Plug 'Shougo/vimproc.vim', { 'do': 'make' } | Plug 'eagletmt/ghcmod-vim', { 'for': 'haskell' }
+"Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
+"Plug 'eagletmt/neco-ghc', { 'for': 'haskell' }
+
+" Rust
+Plug 'rust-lang/rust.vim'
 
 " Scala
-Plug 'derekwyatt/vim-scala'
+"Plug 'derekwyatt/vim-scala'
 
 call plug#end()
 
