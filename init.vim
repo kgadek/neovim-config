@@ -64,6 +64,7 @@ Plug 'vim-airline/vim-airline-themes'
 Plug 'airblade/vim-gitgutter'
 Plug 'jreybert/vimagit'
 Plug 'sheerun/vim-polyglot'
+Plug 'Rykka/riv.vim'
 
 " Ansible
 Plug 'pearofducks/ansible-vim'
