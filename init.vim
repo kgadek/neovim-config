@@ -45,7 +45,7 @@ map <leader>yp "*p
 "-------------------------------------------------------------------------------
 call plug#begin('~/.nvim/vim-plug')
 
-Plug 'vim-syntastic/syntastic'
+"Plug 'vim-syntastic/syntastic'
 Plug 'neomake/neomake'
 Plug 'tpope/vim-surround'
 Plug 'haya14busa/incsearch.vim'
