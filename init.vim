@@ -112,6 +112,7 @@ map <silent> <leader>p :CtrlP()
 noremap <leader>bp :CtrlPBuffer<cr>
 let g:ctrlp_custom_ignore = '\v[\/]dist$'
 let g:ctrlp_user_command = ['.git', 'cd %s; and git ls-files -co --exclude-standard']
+let g:ctrlp_extensions = ['line']
 
 " deoplete
 let g:deoplete#enable_at_startup = 1
